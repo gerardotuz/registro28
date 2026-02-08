@@ -171,7 +171,9 @@ y += GAP_Y;
   y = drawBox(' ', generales._opcion, marginX, y);
 y = drawBox('Sexta Opción', generales.sexta_opcion, marginX + 260, y);
 y += GAP_Y;
-
+  y = drawBox('Septima Opción', generales.septima_opcion, marginX, y);
+y = drawBox('Octava Opción', generales.octava_opcion, marginX + 260, y);
+y += GAP_Y;
 
 
 
