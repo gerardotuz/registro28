@@ -4,7 +4,7 @@
 
 const BASE_URL = window.location.origin.includes("localhost")
   ? "http://localhost:3001"
-  : "https://registro214.onrender.com";
+  : "https://registro28.onrender.com";
 
 /* =========================
    FUNCION PARA MAYUSCULAS
@@ -100,6 +100,8 @@ document.addEventListener("DOMContentLoaded", () => {
         cuarta_opcion: toUpper(formData.get("cuarta_opcion")),
       quinta_opcion: toUpper(formData.get("quinta_opcion")),
          sexta_opcion: toUpper(formData.get("sexta_opcion")),
+          quinta_opcion: toUpper(formData.get("septima_opcion")),
+         sexta_opcion: toUpper(formData.get("octava_opcion")),
 
         estado_nacimiento_general: obtenerClave("estado_nacimiento_general"),
         municipio_nacimiento_general: obtenerClave("municipio_nacimiento_general"),
