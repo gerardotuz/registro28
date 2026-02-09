@@ -69,7 +69,7 @@ bloqueado: {
      sexta_opcion: String,
     septima_opcion: String,
      octava_opcion: String,
-
+novena_opcion: String,
     
     estado_nacimiento_general: String,
     municipio_nacimiento_general: String,
