@@ -1,4 +1,4 @@
-// backend/routers/alumno.js
+  // backend/routers/alumno.js
 const express = require('express');
 const router = express.Router();
 const Alumno = require('../models/Alumno');
@@ -8,6 +8,8 @@ const generarPDF = require('../utils/pdfGenerator');
 const flattenToNested = require('../utils/flattenToNested');
 const path = require('path');
 const fs = require('fs');
+const axios = require("axios");
+
 
 router.get('/ping', (req, res) => {
   res.status(200).json({ ok: true });
@@ -51,6 +53,34 @@ router.get('/folio/:folio', async (req, res) => {
 
 
 
+async function curpExisteEnOtroPlantel(curpActual) {
+  try {
+
+    const response = await axios.get(
+      `https://registro272.onrender.com/api/debug/curp-global/${curpActual}`
+    );
+
+    const resultados = response.data.resultados;
+
+    const duplicado = resultados.find(r =>
+      r.encontrado === true && r.plantel !== "registro28"
+    );
+
+    if (duplicado) {
+      return {
+        existe: true,
+        plantel: duplicado.plantel,
+        folio: duplicado.folio
+      };
+    }
+
+    return { existe: false };
+
+  } catch (error) {
+    console.error("Error validando CURP global:", error.message);
+    return { existe: false };
+  }
+}
 
 
 
