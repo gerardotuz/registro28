@@ -113,10 +113,22 @@ router.post('/guardar', async (req, res) => {
   try {
     const data = req.body;
 
-    // 🚫 PREVENIR DOBLE REGISTRO POR CURP
-    const existe = await Alumno.findOne({
-      "datos_alumno.curp": data.datos_alumno?.curp
-    });
+  const curp = data?.datos_alumno?.curp?.toUpperCase();
+
+if (!curp) {
+  return res.status(400).json({
+    error: "CURP no proporcionada"
+  });
+}
+
+const resultado = await curpExisteEnOtroPlantel(curp);
+
+if (resultado.existe) {
+  return res.status(400).json({
+    error: `La CURP ya está registrada en el plantel ${resultado.plantel} con folio ${resultado.folio}`
+  });
+}
+
 
     if (existe?.registro_completado) {
       return res.status(400).json({
