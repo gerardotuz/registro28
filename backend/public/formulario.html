@@ -69,7 +69,7 @@
     <option value="inteligencia">Inteligencia Artificial</option>
     <option value="programacion">Programación</option>
     <option value="gestion">Gestión e Innovación Turística</option>
-    <option value="negocios">Inteligencia de Negocios</option>
+  
     <option value="ayb">Preparación de Alimentos y Bebidas</option>
 
   </select>
@@ -86,7 +86,7 @@
     <option value="inteligencia">Inteligencia Artificial</option>
     <option value="programacion">Programación</option>
     <option value="gestion">Gestión e Innovación Turística</option>
-    <option value="negocios">Inteligencia de Negocios</option>
+    
 <option value="ayb">Preparación de Alimentos y Bebidas</option>
   </select>
 </div>
@@ -102,7 +102,7 @@
     <option value="inteligencia">Inteligencia Artificial</option>
     <option value="programacion">Programación</option>
     <option value="gestion">Gestión e Innovación Turística</option>
-    <option value="negocios">Inteligencia de Negocios</option>
+    
 <option value="ayb">Preparación de Alimentos y Bebidas</option>
   </select>
 </div>
@@ -118,7 +118,7 @@
     <option value="inteligencia">Inteligencia Artificial</option>
     <option value="programacion">Programación</option>
     <option value="gestion">Gestión e Innovación Turística</option>
-    <option value="negocios">Inteligencia de Negocios</option>
+  
 <option value="ayb">Preparación de Alimentos y Bebidas</option>
   </select>
 </div>
@@ -134,7 +134,7 @@
     <option value="inteligencia">Inteligencia Artificial</option>
     <option value="programacion">Programación</option>
     <option value="gestion">Gestión e Innovación Turística</option>
-    <option value="negocios">Inteligencia de Negocios</option>
+    
 <option value="ayb">Preparación de Alimentos y Bebidas</option>
   </select>
 </div>
@@ -149,7 +149,7 @@
     <option value="inteligencia">Inteligencia Artificial</option>
     <option value="programacion">Programación</option>
     <option value="gestion">Gestión e Innovación Turística</option>
-    <option value="negocios">Inteligencia de Negocios</option>
+    
 <option value="ayb">Preparación de Alimentos y Bebidas</option>
   </select>
 </div>
@@ -165,7 +165,7 @@
     <option value="inteligencia">Inteligencia Artificial</option>
     <option value="programacion">Programación</option>
     <option value="gestion">Gestión e Innovación Turística</option>
-    <option value="negocios">Inteligencia de Negocios</option>
+    
 <option value="ayb">Preparación de Alimentos y Bebidas</option>
   </select>
 </div>
@@ -182,26 +182,12 @@
     <option value="inteligencia">Inteligencia Artificial</option>
     <option value="programacion">Programación</option>
     <option value="gestion">Gestión e Innovación Turística</option>
-    <option value="negocios">Inteligencia de Negocios</option>
+    
 <option value="ayb">Preparación de Alimentos y Bebidas</option>
   </select>
 </div>
 
-  <div>
-  <label for="novena_opcion">9NA OPCIÓN</label>
- <select id="novena_opcion" name="novena_opcion" required>
-    <option value="">Cuál fue tu 9na opción</option>
-  <option value="hospedaje">Servicios de Hospedaje</option>
-    <option value="administracion">Administración de Recursos Humanos</option>
-    <option value="contabilidad">Contabilidad</option>
-    <option value="diseño">Diseño Gráfico Digital</option>
-    <option value="inteligencia">Inteligencia Artificial</option>
-    <option value="programacion">Programación</option>
-    <option value="gestion">Gestión e Innovación Turística</option>
-    <option value="negocios">Inteligencia de Negocios</option>
-<option value="ayb">Preparación de Alimentos y Bebidas</option>
-  </select>
-</div>
+  
 
 
 
@@ -317,7 +303,7 @@
 
 
 <script>
-  const opciones = ["Preparación de Alimentos y Bebidas","administración de recursos humanos", "Servicios de Hospedaje", "contabilidad", "diseño gráfico digital", "inteligencia artificial", "Programación", "Gestión e Innovación Turística", "Inteligencia de Negocios"];
+  const opciones = ["Preparación de Alimentos y Bebidas","administración de recursos humanos", "Servicios de Hospedaje", "contabilidad", "diseño gráfico digital", "inteligencia artificial", "Programación", "Gestión e Innovación Turística"];
   const selects = [
     document.getElementById('primera_opcion'),
     document.getElementById('segunda_opcion'),
@@ -326,8 +312,8 @@
     document.getElementById('quinta_opcion'),
     document.getElementById('sexta_opcion'),
     document.getElementById('septima_opcion'),
-    document.getElementById('octava_opcion'),
-    document.getElementById('novena_opcion')
+    document.getElementById('octava_opcion')
+    
   ];
   function actualizarOpciones() {
     const seleccionados = selects.map(select => select.value);
